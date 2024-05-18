@@ -1,0 +1,14 @@
+.alert {
+  padding: 20px;
+  color: white;
+  background-color: #4caf50;
+}
+
+.alert .alert-success {
+  color: green;
+}
+
+.alert .alert-heading {
+  font-size: 20px;
+  font-weight: bold;
+}
