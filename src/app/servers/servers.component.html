@@ -1,5 +1,14 @@
 <app-server></app-server>
 
+<div class="flex flex-col gap-5 mt-10">
+  <app-success-alert></app-success-alert>
+</div>
+
+<div class="flex flex-col gap-5 py-5">
+  <label class="label font-semibold mb-2">Your Server Name: {{ serverName }}</label>
+  <input type="text" placeholder="Type here" class="input-lg p-4 input-bordered w-full max-w-xs" (input)="onUpdateServerName($event)" />
+</div>
+
 <button
   class="px-4 py-2 bg-blue-500 text-white rounded my-5  {{ allowNewServer ? 'bg-green-500' : 'bg-red-500' }}"
   [disabled]="!allowNewServer" (click)="onCreatedServer()">
