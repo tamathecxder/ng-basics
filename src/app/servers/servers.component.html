@@ -1,1 +1,6 @@
-<p>servers works!</p>
+<app-server></app-server>
+
+<button class="
+  px-4 py-2 bg-blue-500 text-white rounded my-5  {{ !allowNewServer ? 'bg-green-500' : 'bg-red-500' }}
+"
+[disabled]="allowNewServer">Allow New Server</button>
