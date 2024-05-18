@@ -6,12 +6,15 @@ import { Component } from '@angular/core';
   styleUrl: './servers.component.css'
 })
 export class ServersComponent {
-  allowNewServer:boolean = false;
+  allowNewServer: boolean = true;
+  serverCreationStatus: string = 'No server was created!';
 
   constructor() {
-    setTimeout(() => {
-      this.allowNewServer = !this.allowNewServer;
-    }, 5000);
+  }
+
+  onCreatedServer(): void {
+    this.serverCreationStatus = 'Server was created!';
+    this.allowNewServer = false;
   }
 
 }
