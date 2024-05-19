@@ -15,7 +15,13 @@
   Allow New Server
 </button>
 
-<p>{{ serverCreationStatus }}</p>
+<p *ngIf="isServerCreated else noServer">{{ serverCreationStatus }}</p>
+
+<ng-template #noServer>
+  <p>
+    No server was created!
+  </p>
+</ng-template>
 
 <hr class="my-5">
 

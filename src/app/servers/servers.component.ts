@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class ServersComponent {
   allowNewServer: boolean = true;
-  serverCreationStatus: string = 'No server was created!';
+  serverCreationStatus: string = "";
   serverName: string = "";
   username: string = "";
   isResetBtnDisabled: boolean = false;
@@ -20,6 +20,10 @@ export class ServersComponent {
     this.serverCreationStatus = 'Server was created!';
     this.allowNewServer = false;
     this.isServerCreated = true;
+
+    setTimeout(() => {
+      this.isServerCreated = false;
+    }, 2000);
   }
 
   onUpdateServerName(event: Event) {
