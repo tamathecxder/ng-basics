@@ -5,7 +5,7 @@
     'padding': '6px 12px',
     'margin': '0 10px',
     'backgroundColor': getColorStatus(),
-  }">
+  }" [ngClass]="{ 'offline': serverStatus === 'OFFLINE' }">
     {{ serverStatus }}
   </span>
 </p>
