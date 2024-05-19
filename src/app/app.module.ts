@@ -8,6 +8,7 @@ import { ServersComponent } from './servers/servers.component';
 import { AppComponent } from './app.component';
 import { SuccessAlertComponent } from './assignments/basics-assignment-1-start/success-alert/success-alert.component';
 import { WarningAlertComponent } from './assignments/basics-assignment-1-start/warning-alert/warning-alert.component';
+import { DatabindingComponent } from './assignments/basics-assignment-2-start/databinding/databinding.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { WarningAlertComponent } from './assignments/basics-assignment-1-start/w
     ServersComponent,
     SuccessAlertComponent,
     WarningAlertComponent,
+    DatabindingComponent,
   ],
   imports: [
     BrowserModule,

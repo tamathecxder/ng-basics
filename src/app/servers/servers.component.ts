@@ -9,6 +9,8 @@ export class ServersComponent {
   allowNewServer: boolean = true;
   serverCreationStatus: string = 'No server was created!';
   serverName: string = "";
+  username: string = "";
+  isResetBtnDisabled: boolean = false;
 
   constructor() {
   }
@@ -20,5 +22,14 @@ export class ServersComponent {
 
   onUpdateServerName(event: Event) {
     this.serverName = (<HTMLInputElement>event.target).value
+  }
+
+  onResetUsername(): void {
+    if (this.username) {
+      this.username = "";
+      this.isResetBtnDisabled = true;
+    } else {
+      this.isResetBtnDisabled = false;
+    }
   }
 }
