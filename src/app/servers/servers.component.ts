@@ -11,6 +11,7 @@ export class ServersComponent {
   serverName: string = "";
   username: string = "";
   isResetBtnDisabled: boolean = false;
+  isServerCreated: boolean = false;
 
   constructor() {
   }
@@ -18,6 +19,7 @@ export class ServersComponent {
   onCreatedServer(): void {
     this.serverCreationStatus = 'Server was created!';
     this.allowNewServer = false;
+    this.isServerCreated = true;
   }
 
   onUpdateServerName(event: Event) {
