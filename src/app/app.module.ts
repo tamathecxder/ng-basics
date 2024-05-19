@@ -19,7 +19,7 @@ import { WarningAlertComponent } from './assignments/basics-assignment-1-start/w
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

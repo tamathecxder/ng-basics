@@ -11,7 +11,7 @@
 
 <button
   class="px-4 py-2 bg-blue-500 text-white rounded my-5  {{ allowNewServer ? 'bg-green-500' : 'bg-red-500' }}"
-  [disabled]="!allowNewServer" (click)="onCreatedServer()">
+  [disabled]="!allowNewServer" [(ngModel)]="serverName">
   Allow New Server
 </button>
 
