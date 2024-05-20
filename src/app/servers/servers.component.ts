@@ -12,14 +12,14 @@ export class ServersComponent {
   username: string = "";
   isResetBtnDisabled: boolean = false;
   isServerCreated: boolean = false;
+  servers: Array<string> = ['Default Server', 'Public Server'];
 
-  constructor() {
-  }
+  constructor() {}
 
   onCreatedServer(): void {
     this.serverCreationStatus = 'Server was created!';
-    this.allowNewServer = false;
     this.isServerCreated = true;
+    this.servers.push(this.serverName);
 
     setTimeout(() => {
       this.isServerCreated = false;

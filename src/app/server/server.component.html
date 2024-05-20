@@ -1,9 +1,9 @@
-<p>
+<p class="mb-5">
   {{ 'Server' }} with ID {{ serverId }} is
   <span [ngStyle]="{
     'color': 'white',
     'padding': '6px 12px',
-    'margin': '0 10px',
+    'margin': '10px',
     'backgroundColor': getColorStatus(),
   }" [ngClass]="{ 'offline': serverStatus === 'OFFLINE' }">
     {{ serverStatus }}
