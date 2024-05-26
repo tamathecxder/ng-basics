@@ -36,3 +36,28 @@
 
   <button type="button" class="px-4 py-2 bg-orange-600 mt-5 text-white rounded hover:bg-orange-700" (click)="onResetUsername()" [disabled]="isResetBtnDisabled">Reset Username</button>
 </div>
+
+
+<hr class="my-5">
+
+<div class="py-5">
+  <h2 class="text-2xl font-bold">Directives</h2>
+
+  <button type="button" class="px-4 py-2 bg-teal-600 mt-5 text-white rounded hover:bg-teal-700" (click)="onToggleSecretCredential()">Display Details</button>
+
+  <div class="flex flex-col gap-5 my-5">
+    <p class="font-bold text-pretty">Secret Credential: {{ isSecretCredentialVisible ? secretCredential : transformIntoStarSymbol() }}</p>
+
+    <div class="card" *ngIf="isSecretCredentialVisible">
+      <div class="card-body">
+        <ul>
+          <li class="mb-5" *ngFor="let log of secretCredentialLogs;
+            let i = index;"
+            [ngStyle]="i >= 4 ? {'backgroundColor': '#011F4B', 'color': 'white'} : {}">
+              {{ log }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

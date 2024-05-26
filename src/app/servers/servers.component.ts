@@ -13,6 +13,9 @@ export class ServersComponent {
   isResetBtnDisabled: boolean = false;
   isServerCreated: boolean = false;
   servers: Array<string> = ['Default Server', 'Public Server'];
+  secretCredential: string = "@tama";
+  isSecretCredentialVisible: boolean = false;
+  secretCredentialLogs: string[] = [];
 
   constructor() {}
 
@@ -37,5 +40,19 @@ export class ServersComponent {
     } else {
       this.isResetBtnDisabled = false;
     }
+  }
+
+  onToggleSecretCredential(): void {
+    let now = new Date();
+
+    this.isSecretCredentialVisible = !this.isSecretCredentialVisible;
+
+    if (this.isSecretCredentialVisible) {
+      this.secretCredentialLogs.push("Secret Credential was toggled at " + now.toString());
+    }
+  }
+
+  transformIntoStarSymbol(): string {
+    return '*'.repeat(this.secretCredential.length);
   }
 }

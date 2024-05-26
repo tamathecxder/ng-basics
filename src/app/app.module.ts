@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { SuccessAlertComponent } from './assignments/basics-assignment-1-start/success-alert/success-alert.component';
 import { WarningAlertComponent } from './assignments/basics-assignment-1-start/warning-alert/warning-alert.component';
 import { DatabindingComponent } from './assignments/basics-assignment-2-start/databinding/databinding.component';
+import { BasicsAssignment3StartComponent } from './assignments/basics-assignment-3-start/basics-assignment-3-start.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { DatabindingComponent } from './assignments/basics-assignment-2-start/da
     SuccessAlertComponent,
     WarningAlertComponent,
     DatabindingComponent,
+    BasicsAssignment3StartComponent,
   ],
   imports: [
     BrowserModule,
